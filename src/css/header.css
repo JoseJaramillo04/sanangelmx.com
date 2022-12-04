@@ -1,9 +1,3 @@
-body{
-    background-color: grey;    
-}
-
-
-
 header{
     background-color: black;
     text-align: center;
@@ -127,13 +121,13 @@ nav a:hover{
 }
 
 .logo-title a{
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .logo-title .secondary-title{
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 20px;
-    margin-top: -14px;
+    margin-top: -12px;
     white-space: nowrap;
 }
 
@@ -184,4 +178,22 @@ nav a:hover{
     }
 }
 
+nav button{
+    opacity: .8;
+}
+
+.header-btn{
+    padding: 1px 10px;
+    margin-top: 3px;
+    border-color: #E10613;
+    color: #E10613;
+}
+
+
+.header-btn:hover{
+    opacity: 1;
+    background-color: #E10613;
+    color: black;
+    border-color: #E10613;
+}
 

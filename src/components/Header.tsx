@@ -3,12 +3,12 @@ function Header() {
   return (
     <header>
       <div className="logo-container">
-        <img src={require("../assets/images/logo.jpg")} />
+        <img alt="company-logo" src={require("../assets/images/logo.jpg")} />
         <div className="logo-title">
-          <a href="#" className="logo">
+          <a href="/" className="logo">
             SanAngel
           </a>
-          <a className="secondary-title" href="#">
+          <a className="secondary-title" href="/">
             Productos Mexicanos LLC
           </a>
         </div>
@@ -18,19 +18,24 @@ function Header() {
       <nav>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Products</a>
+            <a href="/">Products</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="/">Contact</a>
           </li>
+          {/*<li>
+            <select>
+              <option value="EN-US" className="usa-flag"></option>
+              <option value="ES-MX">Mexico</option>
+            </select>
+  </li> */}
           <li>
-            <a href="#">Flag</a>
-          </li>
-          <li>
-            <a href="#">button</a>
+            <button type="button" className="btn btn-outline-light header-btn">
+              login
+            </button>
           </li>
         </ul>
       </nav>

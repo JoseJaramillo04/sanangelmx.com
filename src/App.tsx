@@ -9,6 +9,8 @@ import {
   Routes,
 } from "react-router-dom";
 
+import cBackground from "./assets/photos/pulla.jpg";
+
 import "bootstrap/dist/css/bootstrap.min.css"; //Boostrap Import 1/2
 import "bootstrap/dist/js/bootstrap.bundle.min"; //Boostrap Import 2/2
 import "./homePageStyle.css";
@@ -19,43 +21,30 @@ function Home() {
 
   return (
     <>
-      <head>
-        <title>SanAngel Productos Mexicanos</title>
-      </head>
-      <div className="container">
-        <div className="row fair-spacing">
-          <div className="col">
-            <iframe
-              src="https://embed.lottiefiles.com/animation/98495"
-              className="underConstruction"
+      <div className="carrousell" style={{ background: `url(${cBackground})` }}>
+        <div className="arrow-row">
+          <a>
+            <img
+              alt="left button"
+              src={require("./assets/photos/next.png")}
+              className="left"
             />
-          </div>
-          <div className="col">
-            <h1 id="underDevTitle">We're under Development</h1>
-            <div className="row">
-              <p id="underDevDescription">Please Come Back later!</p>
-            </div>
-            <div className="row">
-              <button
-                type="button"
-                className="btn btn-outline-primary"
-                id="underDevBtn"
-                onClick={() => {
-                  window.location.href = "https://www.pjl.sanangelmx.com";
-                }}
-              >
-                Employee Portal
-              </button>
-            </div>
-          </div>
+          </a>
+          <a>
+            <img alt="right button" src={require("./assets/photos/next.png")} />
+          </a>
         </div>
-        <div className="row">
-          <p id="salesInfo">
-            For sales please call the office number{" "}
-            <a href="tel:956-992-8831">(956)992-8831</a>
-          </p>
+        <div className="info-container">
+          <span className="info-title">Chile Puya</span>
+          <span className="info-desc">
+            Thrives in the Central Valley of Mexico,
+            <a href="/" className="info-desc">
+              Learn More
+            </a>
+          </span>
         </div>
       </div>
+      <div className="content">Hey</div>
     </>
   );
 }
