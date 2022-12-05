@@ -17,6 +17,10 @@ html{
 .content{
   max-width: 1500px;
   margin: 0 auto;
-  background-color: black
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid green
 }
+
 

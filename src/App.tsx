@@ -14,6 +14,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min"; //Boostrap Import 2/2
 import "./homePageStyle.css";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
+import SectionTitle from "./components/SectionTitle";
 
 function Home() {
   const navigate = useNavigate();
@@ -21,6 +22,9 @@ function Home() {
   return (
     <>
       <Carousel />
+      <div className="content">
+        <SectionTitle />
+      </div>
     </>
   );
 }
