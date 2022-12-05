@@ -58,8 +58,8 @@ function Carousel() {
               <div className="info-container">
                 <span className="info-title">{data[0].name}</span>
                 <span className="info-desc">
-                  {data[0].desc}
-                  <a href={data[0].moreInfoLink} className="info-desc">
+                  {data[0].desc + " "}
+                  <a href={data[0].moreInfoLink} className="info-desc-link">
                     Learn More
                   </a>
                 </span>
@@ -72,8 +72,8 @@ function Carousel() {
                 <div className="info-container">
                   <span className="info-title">{name}</span>
                   <span className="info-desc">
-                    {desc}
-                    <a href={moreInfoLink} className="info-desc">
+                    {desc + " "}
+                    <a href={moreInfoLink} className="info-desc-link">
                       Learn More
                     </a>
                   </span>

@@ -69,4 +69,14 @@
     
     }
   }
-  
+
+  .info-desc-link{
+    margin: 0;
+    opacity: .8;
+    color: white;
+  }
+
+  .info-desc-link:hover{
+    opacity: 1;
+    color: white;
+  }

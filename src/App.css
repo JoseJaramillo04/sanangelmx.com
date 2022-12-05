@@ -1,7 +1,14 @@
+/*  Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+html, body, nav, header, h1,h2,h3,h4,p,span,a{
+  font-family: 'Inter', sans-serif;
+}
+
 
 html{
   background-color: gray;
 }
+
 .Application{
   
   margin-top: 55px;
