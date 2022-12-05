@@ -15,6 +15,8 @@ import "./homePageStyle.css";
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import SectionTitle from "./components/SectionTitle";
+import SideMenu from "./components/SideMenu";
+import ProductCard from "./components/ProductCard";
 
 function Home() {
   const navigate = useNavigate();
@@ -24,10 +26,16 @@ function Home() {
       <Carousel />
 
       <div className="side-menu-container">
-        <div className="side-menu">Hello</div>
+        <SideMenu />
         <div className="content">
           <div className="fair-spacing" />
           <SectionTitle title="Popular Categories" />
+          <div className="products-div-container">
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+            <ProductCard />
+          </div>
         </div>
       </div>
     </>

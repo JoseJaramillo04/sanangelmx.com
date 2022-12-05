@@ -4,13 +4,13 @@ html, body, nav, header, h1,h2,h3,h4,p,span,a{
   font-family: 'Inter', sans-serif;
 }
 
-
-html{
-  background-color: gray;
+body{
+  background-color: black !important;
 }
 
+
 .Application{
-  
+  background-color: white;
   margin-top: 55px;
 }
 
@@ -20,10 +20,12 @@ html{
 }
 
 .content{
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid orange
 }
 
 .fair-spacing{
@@ -41,26 +43,47 @@ html{
   
 }
 
-.side-menu{
-  display: none;
+.side-menu-container{
+  display: flex;
+  flex-direction: row;
 }
 
-@media screen and (min-width:800px) {
-  .side-menu-container{
-    display: flex;
-    flex-direction: row;
-    border: 1px solid purple
-  }
-  
-  .side-menu{
-    display: block;
-    width: 100%;
-    max-width: 260px;
-    margin-top: 16px;
-  
-    border: 1px solid blue;
-  }
+.products-div-container{
+  width: 95%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+.product-card{
+  width: 160px;
+  margin: 0 10px;
+  margin-top: 15px;
+  box-shadow: 0px 5px 6px 1px rgba(0, 0,0,.2);
+  text-align: center;
+}
+
+.product-card img{
+  width: auto;
+  height: 100px;
+  border: 1px solid green;
+  margin: 4%;
+  margin-bottom: 2%;
+}
+
+.product-name-bottom{
+  margin-bottom: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .product-card{
+    width: 250px;
+  }
+  
+  .product-card img{
+    height: 150px;
+  }
+}
 
 
