@@ -18,6 +18,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: background-image 0.5s linear;
 }
 
 .arrow-row{
@@ -55,12 +56,12 @@
   padding-left: 5px;
 }
 
-.carrousell img{
+.arrow-row img{
   width: 30px;
   opacity: 50%;
 }
 
-.carrousell .left{
+.arrow-row .left{
   transform: rotate(180deg);
 }
 
@@ -93,4 +94,10 @@
     margin-top: 120px
   
   }
+}
+
+@media screen and (max-width: 800px) {
+  .carrousell{background-size:  cover !important;}
+  
+  
 }

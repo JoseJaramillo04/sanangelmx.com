@@ -9,7 +9,7 @@ function Header() {
             SanAngel
           </a>
           <a className="secondary-title" href="/">
-            Productos Mexicanos LLC
+            Productos Mexicanos
           </a>
         </div>
       </div>
