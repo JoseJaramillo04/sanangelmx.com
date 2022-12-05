@@ -22,8 +22,13 @@ function Home() {
   return (
     <>
       <Carousel />
-      <div className="content">
-        <SectionTitle />
+
+      <div className="side-menu-container">
+        <div className="side-menu">Hello</div>
+        <div className="content">
+          <div className="fair-spacing" />
+          <SectionTitle title="Popular Categories" />
+        </div>
       </div>
     </>
   );

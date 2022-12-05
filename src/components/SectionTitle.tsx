@@ -1,9 +1,9 @@
 import "../css/sectionTitle.css";
 
-function SectionTitle() {
+function SectionTitle(props: { title: string }) {
   return (
     <div className="section-container">
-      <span className="section-title">Popular Categories</span>
+      <span className="section-title">{props.title}</span>
       <hr className="section-line" />
     </div>
   );

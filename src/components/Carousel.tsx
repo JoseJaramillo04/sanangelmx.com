@@ -38,7 +38,7 @@ function Carousel() {
 
   return (
     <>
-      <div className="content">
+      <div className="carousel-content">
         <div
           id="carouselExampleInterval"
           className="carousel slide"
