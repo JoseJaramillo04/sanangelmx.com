@@ -1,103 +1,15 @@
 
-
+html{
+  background-color: gray;
+}
 .Application{
   
   margin-top: 55px;
 }
 
 .content{
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  background-color: red;
+  background-color: black
 }
 
-.carrousell{
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: background-image 0.5s linear;
-}
-
-.arrow-row{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 80px
-
-}
-
-.info-container{
-  background-color: rgba(0, 0, 0, .5);
-  width: 250px;
-  height: 50px;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin-bottom: 11px;
-  margin-left: 4%;
-}
-
-
-.info-title{
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.info-desc{
-  font-size: 12px;
-  opacity: .9;
-}
-
-.info-title, .info-desc{
-  color: white;
-  padding-left: 5px;
-}
-
-.arrow-row img{
-  width: 30px;
-  opacity: 50%;
-}
-
-.arrow-row .left{
-  transform: rotate(180deg);
-}
-
-@media screen and (min-width: 800px) {
-  .carrousell{
-    height: 280px;
-  }
-
-  .info-container{
-    width: 480px;
-    height: 100px;
-    margin-left: 3%;
-  }
-  .info-title{
-    font-size: 30px;
-    margin-top: 9px;
-  }
-  
-  .info-desc{
-    font-size: 18px;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-  }
-
-  .info-title, .info-desc{
-    margin-left: 15px;
-  }
-
-  .arrow-row{
-    margin-top: 120px
-  
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .carrousell{background-size:  cover !important;}
-  
-  
-}
