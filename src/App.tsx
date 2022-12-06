@@ -18,6 +18,7 @@ import SectionTitle from "./components/SectionTitle";
 import SideMenu from "./components/SideMenu";
 import ProductCard from "./components/ProductCard";
 import PageBreak from "./components/PageBreak";
+import Footer from "./components/Footer";
 
 function Home() {
   const navigate = useNavigate();
@@ -87,6 +88,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      <Footer />
     </>
   );
 }
