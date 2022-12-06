@@ -17,6 +17,7 @@ import Carousel from "./components/Carousel";
 import SectionTitle from "./components/SectionTitle";
 import SideMenu from "./components/SideMenu";
 import ProductCard from "./components/ProductCard";
+import PageBreak from "./components/PageBreak";
 
 function Home() {
   const navigate = useNavigate();
@@ -70,6 +71,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <PageBreak />
     </>
   );
 }
