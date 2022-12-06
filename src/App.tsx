@@ -73,6 +73,9 @@ function Home() {
         </div>
       </div>
       <PageBreak />
+      <div className="content">
+        <ContactUsSection />
+      </div>
     </>
   );
 }
