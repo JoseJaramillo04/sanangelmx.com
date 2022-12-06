@@ -197,3 +197,7 @@ nav button{
     border-color: #E10613;
 }
 
+.logo-container img{
+    pointer-events: none;
+}
+

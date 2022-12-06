@@ -19,17 +19,20 @@ function Footer() {
             src={require("../assets/images/logo-clear.png")}
             alt="business logo"
           />
-          <div className="business-info">
+          <address className="business-info">
             <span className="business-title">
               SanAngel Productos Mexicanos LLC
             </span>
-            <span className="business-address">
+            <a
+              href="https://www.google.com/maps/dir/22.9515384,-102.7020223/sanangel+productos+mexicanos/@24.6252526,-102.7247131,7z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x866509b03570790f:0xc46d0e558d68b57!2m2!1d-98.2567735!2d26.1485378"
+              className="business-address"
+            >
               2501 W. Military Hwy Ste B-15, McAllen TX 78503
-            </span>
+            </a>
             <a href="tel:+1956-992-8831" className="business-phone">
               +1(956)992-8831
             </a>
-          </div>
+          </address>
         </div>
         <div className="minor-info">
           <div className="two">
