@@ -1,4 +1,5 @@
 import "../css/sideMenu.css";
+import "../css/productCard.css";
 
 function ProductCard(props: { name: string; imgSrc: any }) {
   return (
