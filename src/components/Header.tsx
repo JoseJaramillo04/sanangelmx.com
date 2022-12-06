@@ -33,7 +33,13 @@ function Header() {
             </select>
   </li> */}
           <li>
-            <button type="button" className="btn btn-outline-light header-btn">
+            <button
+              type="button"
+              className="btn btn-outline-light header-btn"
+              onClick={() => {
+                window.location.href = "https://www.pjl.sanangelmx.com";
+              }}
+            >
               login
             </button>
           </li>
