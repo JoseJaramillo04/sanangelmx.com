@@ -21,6 +21,28 @@ import ProductCard from "./components/ProductCard";
 function Home() {
   const navigate = useNavigate();
 
+  const popularCategories = [
+    { name: "Dry Peppers", img: "ancho.jpg" },
+    { name: "Herbs and Spices", img: "pimienta.jpg" },
+    { name: "Rice, Grains & Dried Beans", img: "frijol.jpg" },
+    { name: "Beverages", img: "coca.jpg" },
+    { name: "Non-edibles", img: "palo-elote.jpg" },
+    { name: "Chamoy", img: "deli.jpg" },
+    { name: "Mexican Candy", img: "forritos.jpg" },
+    { name: "Mexican Chips", img: "sabritas.png" },
+  ];
+
+  const featuredProducts = [
+    { name: "Dry Guajillo", img: "guajillo.jpg" },
+    { name: "Dry Ancho", img: "ancho.jpg" },
+    { name: "Garlic", img: "ajo.jpg" },
+    { name: "Hibiscus Flower", img: "jamaica.jpg" },
+    { name: "Pinto Beans", img: "pinto.jpg" },
+    { name: "Mayocoba Beans", img: "mayocoba.jpg" },
+    { name: "Corn Husks", img: "hoja.jpg" },
+    { name: "Tamarind", img: "tamarindo.jpg" },
+  ];
+
   return (
     <>
       <Carousel />
@@ -28,13 +50,23 @@ function Home() {
       <div className="side-menu-container">
         <SideMenu />
         <div className="content">
-          <div className="fair-spacing" />
           <SectionTitle title="Popular Categories" />
           <div className="products-div-container">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {popularCategories.map(({ name, img }) => (
+              <ProductCard
+                name={name}
+                imgSrc={require(`./assets/photos/${img}`)}
+              />
+            ))}
+          </div>
+          <SectionTitle title="Featured Products" />
+          <div className="products-div-container">
+            {featuredProducts.map(({ name, img }) => (
+              <ProductCard
+                name={name}
+                imgSrc={require(`./assets/photos/${img}`)}
+              />
+            ))}
           </div>
         </div>
       </div>
