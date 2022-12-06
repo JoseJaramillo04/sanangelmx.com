@@ -120,3 +120,12 @@ footer img{
 .business-address{
     margin-bottom: 0px;
 }
+
+footer .signature a {
+    color: white;
+    font-weight: 300;
+}
+
+footer .signature a:hover {
+    color: #E10613
+}

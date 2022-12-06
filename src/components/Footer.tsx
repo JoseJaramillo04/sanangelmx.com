@@ -8,7 +8,8 @@ function Footer() {
       <div className="footer-div">
         {
           <span className="signature">
-            Copyright © {currentYear} Fernando Jaramillo
+            Copyright © {currentYear + " "}
+            <a href="https://www.jaramillo.dev">Fernando Jaramillo </a>
           </span>
         }
         <span className="signature">All rights reserved.</span>
