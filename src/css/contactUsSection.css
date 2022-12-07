@@ -1,0 +1,141 @@
+.contact-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.contact-section h2{
+    margin-bottom: 30px;
+}
+
+.contact-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.business-hours{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    order: 1;
+}
+
+.google-maps iframe{
+    width: 95%;
+    height: 250px;
+}
+
+.google-maps{
+    order: 0;
+    margin-bottom: 20px;
+}
+
+.business-hours h3{
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.business-hours span{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.contact-section .google-maps{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-content button{
+    background-color: #E10613;
+    color: white;
+    font-size: 23px;
+    font-weight: 500;
+    border: 1px solid #E10613;
+    border-radius: 5px;
+    margin:15px 15px;
+    padding: 1px 20px;
+}
+
+.contact-content .btn-msg{
+    font-size: 18px;
+    color: #525252;
+}
+
+.contact-content .btn-row img{
+    width: 23px;
+    height: auto;
+    margin-right: 5px;
+}
+
+.btn-row .msg{
+    padding: 1px 10px;
+}
+
+.located-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.located-info img{
+    width: 95%;
+    max-width: 500px;
+}
+
+.located-info .located-text{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.located-text span{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media screen and (min-width:800px) {
+    .contact-content{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contact-section{
+    padding: 0 80px;
+    }
+
+    .google-maps iframe{
+        height: 400px;
+    }
+
+    .google-maps{
+        order: 1;
+    }
+
+    .business-hours{
+        order: 0;
+        max-height: 340px;
+    }
+
+    .located-info{
+        flex-direction: row;
+    }
+
+    .located-info .located-text{
+        width: 100%;
+        max-width: 380px;
+        margin-left: 120px;
+        margin-top: 0px;
+    }
+}

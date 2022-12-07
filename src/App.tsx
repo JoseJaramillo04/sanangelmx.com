@@ -19,6 +19,7 @@ import SideMenu from "./components/SideMenu";
 import ProductCard from "./components/ProductCard";
 import PageBreak from "./components/PageBreak";
 import Footer from "./components/Footer";
+import ContactUsSection from "./components/ContactUsSection";
 
 function Home() {
   const navigate = useNavigate();
