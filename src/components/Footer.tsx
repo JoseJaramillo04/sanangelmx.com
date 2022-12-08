@@ -40,7 +40,7 @@ function Footer() {
             <a href="/">COMPANY INFORMATION</a>
             <a href="/">WHERE TO BUY</a>
             <a href="/">WISH LIST</a>
-            <a href="/">PRODUCTS</a>
+            <a href="/products">PRODUCTS</a>
           </div>
           <div className="three">
             <a href="/">ABOUT US</a>
@@ -51,7 +51,7 @@ function Footer() {
           <div className="four">
             <a href="/">RESOURCES</a>
             <a href="/">EMPLOYMENT</a>
-            <a href="/">CONTACT US</a>
+            <a href="/contact">CONTACT US</a>
             <a href="/">COPYRIGHT NOTICE</a>
           </div>
         </div>

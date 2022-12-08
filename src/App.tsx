@@ -20,6 +20,7 @@ import ProductCard from "./components/ProductCard";
 import PageBreak from "./components/PageBreak";
 import Footer from "./components/Footer";
 import ContactUsSection from "./components/ContactUsSection";
+import Products from "./components/Screens/Products";
 
 function Home() {
   const navigate = useNavigate();
@@ -89,6 +90,7 @@ function App() {
         <div className="Application">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
           </Routes>
         </div>
       </BrowserRouter>
