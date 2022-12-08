@@ -20,6 +20,7 @@ app.get('/products/items', async (req,res) => {
         console.error(error)
     })
 
+    //Clean up the JSON
     items.forEach(element => {
         delete element.autoManage
         delete element.alternateName
@@ -36,4 +37,4 @@ app.get('/products/items', async (req,res) => {
      res.json(items)
 } )
 
-app.listen(8000,()=> console.log(`Server is running on port ${PORT}`))
+app.listen(PORT,()=> console.log(`Server is running on port ${PORT}`))
