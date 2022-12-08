@@ -10,16 +10,29 @@ const app = express()
 app.use(cors())
 
 app.get('/products/items', async (req,res) => {
-    const options = {method: 'GET',
-     url:`https://api.clover.com/v3/merchants/${process.env.MERCHANT_ID}/items?limit=999`,
-     headers: {authorization: `Bearer ${process.env.CLOVER_API_KEY}`}};
+    let offset = 0
+    let items = []
+    
+    let data = []
 
-    const items = await axios.request(options).then((response) =>{
-        return response.data.elements
-    }).catch((error)=>{
-        console.error(error)
-    })
+    //Loop queries ALL products, despite the 1000 hard limit
+    do{
+        const options = {method: 'GET',
+        url:`https://api.clover.com/v3/merchants/${process.env.MERCHANT_ID}/items?limit=1000&offset=${offset}`,
+        headers: {authorization: `Bearer ${process.env.CLOVER_API_KEY}`}};
 
+
+        data = await axios.request(options).then((response) =>{
+            return response.data.elements
+        }).catch((error)=>{
+            console.error(error)
+        })
+
+        items= items.concat(data)
+        offset = items.length
+    }while(data.length === 1000);
+
+    
     //Clean up the JSON
     items.forEach(element => {
         delete element.autoManage
