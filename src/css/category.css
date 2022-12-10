@@ -98,3 +98,12 @@ tr{
     border: none;
 }
 
+.search-bar-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-bar-row span{
+    font-size: 18px;
+}

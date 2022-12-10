@@ -22,6 +22,10 @@ const ProductList: React.FunctionComponent<Props> = ({
   return (
     <>
       <div className="search-bar-row">
+        <div>
+          <span className="red">{items.length + " "}</span>
+          <span>results</span>
+        </div>
         <div className="search-container">
           <div className="search-icon">
             <FontAwesomeIcon icon={faSearch} />
