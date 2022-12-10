@@ -26,14 +26,30 @@ function Home() {
   const navigate = useNavigate();
 
   const popularCategories = [
-    { name: "Dry Peppers", img: "ancho.jpg" },
-    { name: "Herbs and Spices", img: "pimienta.jpg" },
-    { name: "Rice, Grains & Dried Beans", img: "frijol.jpg" },
-    { name: "Beverages", img: "coca.jpg" },
-    { name: "Non-edibles", img: "palo-elote.jpg" },
-    { name: "Chamoy", img: "deli.jpg" },
-    { name: "Mexican Candy", img: "forritos.jpg" },
-    { name: "Mexican Chips", img: "sabritas.png" },
+    { name: "Dry Peppers", img: "ancho.jpg", categoryId: "KWX2HY75G7RDE" },
+    {
+      name: "Herbs and Spices",
+      img: "pimienta.jpg",
+      categoryId: "EZP1K61ZYDWT6",
+    },
+    {
+      name: "Grains, Cereals, Seeds and Beans",
+      img: "frijol.jpg",
+      categoryId: "JK00BXF5QSRQ0",
+    },
+    { name: "Beverages", img: "coca.jpg", categoryId: "952RKV8KRRCY6" },
+    {
+      name: "Plastic bags",
+      img: "palo-elote.jpg",
+      categoryId: "MY4JG6CAKZJCT",
+    },
+    {
+      name: "Hot Sauce, Chamoy, artificial food flavors",
+      img: "deli.jpg",
+      categoryId: "ZV0NZ0EBTWFCJ",
+    },
+    { name: "Mexican Candy", img: "forritos.jpg", categoryId: "15XX57BC1V85J" },
+    { name: "Mexican Chips", img: "sabritas.png", categoryId: "F94R6P2FK902C" },
   ];
 
   const featuredProducts = [
