@@ -45,6 +45,9 @@ app.get('/products/items', async (req,res) => {
         delete element.cost
         delete element.isRevenue
         delete element.priceWithoutVat
+        let date = new Date(parseInt(element.modifiedTime))
+        element.modifiedTime = date.getMonth()+'/'+date.getDay()+'/'+date.getFullYear()+' at '+ date.toLocaleTimeString('en-US',
+        {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'})
     });
    
      res.json(items)
@@ -68,6 +71,11 @@ app.get('/categories', async (req,res) => {
         }).catch((error)=>{
             console.error(error)
         })
+
+        if(data === undefined){
+            res.json([])
+            return 
+        }
 
         categories= categories.concat(data)
         offset = categories.length
@@ -118,9 +126,38 @@ app.get('/categories/:categoryId', async (req,res) => {
         delete element.cost
         delete element.isRevenue
         delete element.priceWithoutVat
+        let date = new Date(parseInt(element.modifiedTime))
+        element.modifiedTime = date.getMonth()+'/'+date.getDay()+'/'+date.getFullYear()+' at '+ date.toLocaleTimeString('en-US',
+        {timeZone:'UTC',hour12:true,hour:'numeric',minute:'numeric'})
     });
 
     res.json(items)
+} )
+
+app.get('/categories/name/:categoryId', async (req,res) => {
+    const {categoryId} = req.params;
+    
+    let data = []
+
+    //Loop queries ALL products, despite the 1000 hard limit
+  
+    const options = {method: 'GET',
+    url:`https://api.clover.com/v3/merchants/${process.env.MERCHANT_ID}/categories/${categoryId}`,
+    headers: {authorization: `Bearer ${process.env.CLOVER_API_KEY}`}};
+
+
+    data = await axios.request(options).then((response) =>{
+        return response.data
+    }).catch((error)=>{
+        console.error(error)
+    })
+
+    if(data === undefined){
+        res.json([])
+        return 
+    }
+
+    res.json(data)
 } )
 
 app.listen(PORT,()=> console.log(`Server is running on port ${PORT}`))

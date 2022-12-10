@@ -57,3 +57,12 @@ body{
   max-height: 600px;
   overflow: scroll;
 }
+
+.red{
+  color: #E10613;
+  text-align: center;
+}
+
+.bold{
+  font-weight: 600;
+}

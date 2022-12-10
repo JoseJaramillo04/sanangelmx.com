@@ -21,6 +21,7 @@ import PageBreak from "./components/PageBreak";
 import Footer from "./components/Footer";
 import ContactUsSection from "./components/ContactUsSection";
 import Products from "./components/Screens/Products";
+import Category from "./components/Screens/Category";
 
 function Home() {
   const navigate = useNavigate();
@@ -66,16 +67,17 @@ function Home() {
   return (
     <>
       <Carousel />
-
       <div className="side-menu-container">
         <SideMenu />
         <div className="content">
           <SectionTitle title="Popular Categories" />
           <div className="products-div-container">
-            {popularCategories.map(({ name, img }) => (
+            {popularCategories.map(({ name, img, categoryId }) => (
               <ProductCard
+                key={"product-card" + name}
                 name={name}
                 imgSrc={require(`./assets/photos/${img}`)}
+                categoryId={categoryId}
               />
             ))}
           </div>
@@ -83,6 +85,7 @@ function Home() {
           <div className="products-div-container">
             {featuredProducts.map(({ name, img }) => (
               <ProductCard
+                key={"product-card-featured" + name}
                 name={name}
                 imgSrc={require(`./assets/photos/${img}`)}
               />
@@ -100,18 +103,17 @@ function Home() {
 
 function App() {
   return (
-    <>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <div className="Application">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
-          </Routes>
-        </div>
-      </BrowserRouter>
+      <div className="Application">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/category/:categoryId" element={<Category />} />
+        </Routes>
+      </div>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

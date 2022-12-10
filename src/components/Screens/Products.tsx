@@ -25,10 +25,15 @@ function Products() {
     <>
       <div className="content">
         <RotatingWordsAnimation />
-        <div className="product-list">
-          {products.map((item: any) => (
-            <span>{item.name}</span>
-          ))}
+        <div className="category-content">
+          <table>
+            {products.map((item: any) => (
+              <tr>
+                <td className="tr-name">{item.name}</td>
+                <td className="tr-time">last modified: {item.modifiedTime}</td>
+              </tr>
+            ))}
+          </table>
         </div>
       </div>
     </>

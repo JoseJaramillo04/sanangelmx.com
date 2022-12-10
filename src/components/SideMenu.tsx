@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 import "../css/sideMenu.css";
 function SideMenu() {
   const [categories, setCategories] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const options = {
@@ -20,13 +22,29 @@ function SideMenu() {
       });
   }, []);
 
+  function navigateToCategory(categoryId: string, categoryName: string) {
+    navigate(`/category/${categoryId}?category_name=${categoryName}`);
+  }
+
   return (
     <div className="side-menu">
       <h4>Categories</h4>
       <div className="category-list">
-        {categories.map((category: any) => (
-          <span id={category.id}>{category.name}</span>
-        ))}
+        {categories.length !== 0 ? (
+          categories.map((category: any) => (
+            <span
+              key={"category" + category.id}
+              id={category.id}
+              onClick={() => {
+                navigateToCategory(category.id, category.name);
+              }}
+            >
+              {category.name}
+            </span>
+          ))
+        ) : (
+          <span className="red bold">Error: Database not Found!</span>
+        )}
       </div>
     </div>
   );
