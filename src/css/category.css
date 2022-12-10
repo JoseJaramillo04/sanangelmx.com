@@ -36,8 +36,15 @@
     align-items: center;
     max-height: 100vh;
     overflow: scroll;
-    margin-top: 20px;
     overflow-x: hidden;
+}
+
+.search-bar-row{
+    margin-top: 10px;
+    width: 95%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: right;
 }
 
 .category-content span{
@@ -65,3 +72,28 @@ tr{
     width: 40%;
 }
 
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #999999;
+    width: 35%;
+    border-radius: 4px;
+}
+
+.search-icon {
+    padding: 0 0.5em;
+    opacity: .5;
+}
+
+.search-field {
+    padding: 0.4em;
+    border: none;
+    width: 100%;
+}
+
+
+.search-field:focus{
+    outline: none;
+    border: none;
+}

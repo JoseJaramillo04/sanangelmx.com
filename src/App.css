@@ -66,3 +66,36 @@ body{
 .bold{
   font-weight: 600;
 }
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #52525221;
+}
+
+/* Firefox */
+scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+scrollbar-thumb {
+  background-color: #52525221;
+}
+
+/* Internet Explorer */
+scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+}
+
+scrollbar-thumb {
+  background-color: #52525221;
+  border-radius: 10
+}

@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import ProductList from "../ProductList";
 import RotatingWordsAnimation from "../RotatingWordsAnimation";
 
 function Products() {
@@ -25,16 +26,7 @@ function Products() {
     <>
       <div className="content">
         <RotatingWordsAnimation />
-        <div className="category-content">
-          <table>
-            {products.map((item: any) => (
-              <tr>
-                <td className="tr-name">{item.name}</td>
-                <td className="tr-time">last modified: {item.modifiedTime}</td>
-              </tr>
-            ))}
-          </table>
-        </div>
+        <ProductList items={products} placeholder={"all products"} />
       </div>
     </>
   );

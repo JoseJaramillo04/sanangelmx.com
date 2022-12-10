@@ -6,6 +6,8 @@ import CategoryHeader from "../CategoryHeader";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+import ProductList from "../ProductList";
+
 function Category(props: { categoryTitle?: string }) {
   let { categoryId } = useParams();
   const [params] = useSearchParams();
@@ -60,20 +62,7 @@ function Category(props: { categoryTitle?: string }) {
         <SideMenu />
         <div className="content">
           <CategoryHeader name={categoryName} />
-          <div className="category-content">
-            <table>
-              <tbody>
-                {items.map((item: any) => (
-                  <tr key={"row" + item.id}>
-                    <td className="tr-name">{item.name}</td>
-                    <td className="tr-time">
-                      last modified: {item.modifiedTime}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          <ProductList items={items} placeholder={categoryName} />
         </div>
       </div>
     </div>
