@@ -2,11 +2,14 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import "../css/sideMenu.css";
+import LoadingAnimation from "./LoadingAnimation";
 function SideMenu() {
   const [categories, setCategories] = useState([]);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const options = {
       method: "GET",
       url: `http://localhost:8000/categories`,
@@ -16,9 +19,11 @@ function SideMenu() {
       .request(options)
       .then((response) => {
         setCategories(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setLoading(false);
       });
   }, []);
 
@@ -30,7 +35,9 @@ function SideMenu() {
     <div className="side-menu">
       <h4>Categories</h4>
       <div className="category-list">
-        {categories.length !== 0 ? (
+        {loading ? (
+          <LoadingAnimation />
+        ) : categories.length !== 0 ? (
           categories.map((category: any) => (
             <span
               key={"category" + category.id}

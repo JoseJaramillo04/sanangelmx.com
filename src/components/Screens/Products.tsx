@@ -1,12 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import LoadingAnimation from "../LoadingAnimation";
 import ProductList from "../ProductList";
 import RotatingWordsAnimation from "../RotatingWordsAnimation";
 
 function Products() {
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     const options = {
       method: "GET",
       url: `http://localhost:8000/products/items`,
@@ -16,9 +19,11 @@ function Products() {
       .request(options)
       .then((response) => {
         setProducts(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setLoading(false);
       });
   }, []);
 
@@ -26,7 +31,11 @@ function Products() {
     <>
       <div className="content">
         <RotatingWordsAnimation />
-        <ProductList items={products} placeholder={"all products"} />
+        {loading ? (
+          <LoadingAnimation />
+        ) : (
+          <ProductList items={products} placeholder={"all products"} />
+        )}
       </div>
     </>
   );

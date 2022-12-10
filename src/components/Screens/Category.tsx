@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import ProductList from "../ProductList";
+import LoadingAnimation from "../LoadingAnimation";
 
 function Category(props: { categoryTitle?: string }) {
   let { categoryId } = useParams();
@@ -16,6 +17,7 @@ function Category(props: { categoryTitle?: string }) {
   );
 
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   const getCategoryName = () => {
     const options = {
@@ -34,6 +36,7 @@ function Category(props: { categoryTitle?: string }) {
   };
 
   useEffect(() => {
+    setLoading(true);
     const options = {
       method: "GET",
       url: `http://localhost:8000/categories/${categoryId}`,
@@ -43,9 +46,11 @@ function Category(props: { categoryTitle?: string }) {
       .request(options)
       .then((response) => {
         setItems(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
+        setLoading(false);
       });
 
     setCategoryName(params.get("category_name") ?? "");
@@ -62,7 +67,11 @@ function Category(props: { categoryTitle?: string }) {
         <SideMenu />
         <div className="content">
           <CategoryHeader name={categoryName} />
-          <ProductList items={items} placeholder={categoryName} />
+          {loading ? (
+            <LoadingAnimation />
+          ) : (
+            <ProductList items={items} placeholder={categoryName} />
+          )}
         </div>
       </div>
     </div>
