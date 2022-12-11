@@ -35,7 +35,7 @@ function ContactUsSection() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          />
         </div>
       </div>
       <div className="located-info">

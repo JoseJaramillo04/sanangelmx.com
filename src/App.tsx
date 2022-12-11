@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import {
-  useNavigate,
-  Route,
-  HashRouter,
-  BrowserRouter,
-  Routes,
-} from "react-router-dom";
+import { useNavigate, Route, BrowserRouter, Routes } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css"; //Boostrap Import 1/2
 import "bootstrap/dist/js/bootstrap.bundle.min"; //Boostrap Import 2/2
@@ -22,6 +15,7 @@ import Footer from "./components/Footer";
 import ContactUsSection from "./components/ContactUsSection";
 import Products from "./components/Screens/Products";
 import Category from "./components/Screens/Category";
+import Contact from "./components/Screens/Contact";
 
 function Home() {
   const navigate = useNavigate();
@@ -110,6 +104,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/category/:categoryId" element={<Category />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />
