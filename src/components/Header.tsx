@@ -22,14 +22,15 @@ function Header() {
           loading="lazy"
           alt="company-logo"
           src={require("../assets/images/logo.jpg")}
+          onClick={navigateToHome}
         />
         <div className="logo-title">
-          <a href="/" className="logo">
+          <span onClick={navigateToHome} className="logo">
             SanAngel
-          </a>
-          <a className="secondary-title" href="/">
+          </span>
+          <span onClick={navigateToHome} className="secondary-title">
             Productos Mexicanos
-          </a>
+          </span>
         </div>
       </div>
 

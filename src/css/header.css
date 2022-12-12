@@ -114,7 +114,7 @@ nav a:hover, .nav-link:hover{
     flex-direction: column;
 }
 
-.logo-title .secondary-title, .logo-title a{
+.logo-title .secondary-title, .logo-title span{
     margin: 0;
     padding: 0;
     text-align: left;
@@ -122,8 +122,9 @@ nav a:hover, .nav-link:hover{
     text-decoration: none;
 }
 
-.logo-title a{
+.logo-title span{
     font-size: 27px;
+    cursor: pointer;
 }
 
 .logo-title .secondary-title{

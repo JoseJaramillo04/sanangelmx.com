@@ -17,6 +17,7 @@ function Category(props: { categoryTitle?: string }) {
   );
 
   const [items, setItems] = useState([]);
+
   const [loading, setLoading] = useState(false);
 
   const getCategoryName = () => {

@@ -3,7 +3,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface Item {
-  id: number;
+  id: string;
   name: string;
   modifiedTime: string;
 }
