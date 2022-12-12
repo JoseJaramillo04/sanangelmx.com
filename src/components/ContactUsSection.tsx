@@ -40,7 +40,8 @@ function ContactUsSection() {
       </div>
       <div className="located-info">
         <img
-          src={require("../assets/images/Terminal-market.jpg")}
+          loading="lazy"
+          src={require("../assets/images/Terminal-market.webp")}
           alt="sky-view of the McAllen Produce Terminal Market"
         />
         <div className="located-text">

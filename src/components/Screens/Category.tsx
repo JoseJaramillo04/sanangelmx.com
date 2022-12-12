@@ -66,7 +66,12 @@ function Category(props: { categoryTitle?: string }) {
       <div className="side-menu-container">
         <SideMenu />
         <div className="content">
-          <CategoryHeader name={categoryName} />
+          {categoryId ? (
+            <CategoryHeader name={categoryName} categoryId={categoryId} />
+          ) : (
+            <></>
+          )}
+
           {loading ? (
             <LoadingAnimation />
           ) : (

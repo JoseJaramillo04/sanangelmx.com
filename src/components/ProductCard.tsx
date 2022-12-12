@@ -22,7 +22,7 @@ function ProductCard(props: {
           }}
         >
           <div className="img-container">
-            <img alt={props.name} src={props.imgSrc} />
+            <img loading="lazy" alt={props.name} src={props.imgSrc} />
           </div>
           <span className="product-name">{props.name}</span>
           <div className="product-name-bottom"></div>

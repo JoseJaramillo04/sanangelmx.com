@@ -17,6 +17,7 @@ function Footer() {
       <div className="footer-lower">
         <div className="one">
           <img
+            loading="lazy"
             src={require("../assets/images/logo-clear.png")}
             alt="business logo"
           />

@@ -1,6 +1,11 @@
 import { useState } from "react";
 import "../css/carousel.css";
-import cPulla from "../assets/photos/pulla.jpg";
+import cPulla from "../assets/photos/pullaC.jpg";
+import cTamarindo from "../assets/licensed/tamarindo-header.webp";
+import cGarlic from "../assets/licensed/garlic-header.webp";
+import cSpices from "../assets/licensed/spices-header.webp";
+import cArbol from "../assets/licensed/arbol-header.webp";
+import cJamaica from "../assets/licensed/jamaica-header.webp";
 
 function Carousel() {
   const data = [
@@ -14,25 +19,31 @@ function Carousel() {
       name: "Purple Garlic",
       desc: "Thrivdfdes in the Central Valley of Mexico,",
       moreInfoLink: "#",
-      image: cPulla,
+      image: cGarlic,
     },
     {
       name: "Spices",
       desc: "ff in the Central Valley of Mexico,",
       moreInfoLink: "#",
-      image: cPulla,
+      image: cSpices,
     },
     {
       name: "Chile Arbol",
       desc: "ff in the Central Valley of Mexico,",
       moreInfoLink: "#",
-      image: cPulla,
+      image: cArbol,
     },
     {
       name: "Jamaica",
       desc: "ff in the Central Valley of Mexico,",
       moreInfoLink: "#",
-      image: cPulla,
+      image: cJamaica,
+    },
+    {
+      name: "Tamarindo",
+      desc: "ff in the Central Valley of Mexico,",
+      moreInfoLink: "#",
+      image: cTamarindo,
     },
   ];
 
@@ -51,6 +62,7 @@ function Carousel() {
               key={data[0].name}
             >
               <img
+                loading="lazy"
                 src={data[0].image}
                 className="d-block w-100"
                 alt={data[0].name}
@@ -68,7 +80,12 @@ function Carousel() {
 
             {data.slice(1).map(({ name, desc, moreInfoLink, image }) => (
               <div className="carousel-item" data-bs-interval="9000" key={name}>
-                <img src={image} className="d-block w-100" alt={name} />
+                <img
+                  loading="lazy"
+                  src={image}
+                  className="d-block w-100"
+                  alt={name}
+                />
                 <div className="info-container">
                   <span className="info-title">{name}</span>
                   <span className="info-desc">

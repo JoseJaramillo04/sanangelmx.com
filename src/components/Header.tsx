@@ -18,7 +18,11 @@ function Header() {
   return (
     <header>
       <div className="logo-container">
-        <img alt="company-logo" src={require("../assets/images/logo.jpg")} />
+        <img
+          loading="lazy"
+          alt="company-logo"
+          src={require("../assets/images/logo.jpg")}
+        />
         <div className="logo-title">
           <a href="/" className="logo">
             SanAngel
