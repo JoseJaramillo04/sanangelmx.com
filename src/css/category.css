@@ -77,7 +77,7 @@ tr{
     display: flex;
     align-items: center;
     border: 1px solid #999999;
-    width: 35%;
+    width: 55%;
     border-radius: 4px;
 }
 
@@ -124,5 +124,9 @@ tr{
     .category-header h2{
         font-size: 50px;
         width: 100%;
+    }
+
+    .search-container {
+        width: 35%;
     }
 }

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 function CategoryHeader(props: { name?: string; categoryId: string }) {
   const map = new Map([
     ["KWX2HY75G7RDE", "licensed/arbol-header.webp"],
@@ -27,7 +25,6 @@ function CategoryHeader(props: { name?: string; categoryId: string }) {
         }`)}
         alt="header"
       />
-
       <h2>{props.name}</h2>
     </div>
   );
