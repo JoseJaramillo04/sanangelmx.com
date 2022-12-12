@@ -21,7 +21,17 @@ function Contact() {
           method="POST"
         >
           <h4>Get in Touch with Us</h4>
-          <span>Lorem ipsum dolor sit amet, consectetur adipisci</span>
+          <span>
+            We will reply faster via phone number or{" "}
+            <a
+              href="https://business.google.com/message?args=CiIIAxITODQwOTk5NTY2MjYyMzAwODA1OBoEZ21ibCIDR01NEtoDCgJNUxLTAwpYdHlwZS5nb29nbGVhcGlzLmNvbS9nb29nbGUuaW50ZXJuYWwuY29tbXVuaWNhdGlvbnMuaW5zdGFudG1lc3NhZ2luZy52MS5DaGF0SW50ZW50QXBpQXJncxL2AgoXCAMSEzg0MDk5OTU2NjI2MjMwMDgwNTgyPgo3dHlwZS5nb29nbGVhcGlzLmNvbS9jaGF0LmJvdC5wbGF0Zm9ybS5DdXN0b21TZXNzaW9uRGF0YRIDCgECUARiB3dlYnZpZXdqOGh0dHA6Ly9yYm0uZ29vZy9yYm1tLWF1dG9wdXNoL2NvbnZlcnNhdGlvbnMvY29udmVyc2F0aW9ucisIAxITODQwOTk5NTY2MjYyMzAwODA1OBoEZ21ibCIMOTY4NjEwNTU0NTQwiAGAowWVAZqZGT-gAcW90uAEsgGVARKSASIgU2FuQW5nZWwgUHJvZHVjdG9zIE1leGljYW5vcyBMTEMqbmh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS8tb3M4d3NSQklSejAvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvZTFnbFVzRzlkS00vczEyMC1wLWstbm8tbnMtbmQvcGhvdG8uanBnEnAKBExCUEkSaApCdHlwZS5nb29nbGVhcGlzLmNvbS9tYXBzX3RhY3RpbGUuc2hhcmVkLkxpZ2h0ZXJCdXNpbmVzc1Byb2ZpbGVJbmZvEiIKIFNhbkFuZ2VsIFByb2R1Y3RvcyBNZXhpY2Fub3MgTExDGhoKGLWlvxScqb8Utam_FMepvxTPqb8U1qm_FA&hl=en&gl=MX&v=1&chtn=AFxPQEfmDl-kq-BRDQoINXtzgVqUoBbCAQ&timestamp=1670384409767"
+              className="red"
+            >
+              Message
+            </a>{" "}
+            but we will still reply to your email if not in a hurry, so let us
+            know how we can help you!
+          </span>
           <label htmlFor="input-field-name">Your name</label>
           <input
             type="hidden"

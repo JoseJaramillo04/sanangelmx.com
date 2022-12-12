@@ -63,6 +63,10 @@ body{
   text-align: center;
 }
 
+.red:hover{
+  color: #E10613;
+}
+
 .bold{
   font-weight: 600;
 }
