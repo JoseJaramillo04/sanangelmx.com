@@ -17,7 +17,7 @@ function Carousel() {
               key={carouselData[0].name}
             >
               <img
-                loading="lazy"
+                loading="eager"
                 src={carouselData[0].image}
                 className="d-block w-100"
                 alt={carouselData[0].name}
@@ -45,7 +45,7 @@ function Carousel() {
                   key={name}
                 >
                   <img
-                    loading="lazy"
+                    loading="eager"
                     src={image}
                     className="d-block w-100"
                     alt={name}
