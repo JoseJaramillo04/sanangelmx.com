@@ -12,7 +12,7 @@ function Products() {
     setLoading(true);
     const options = {
       method: "GET",
-      url: `http://localhost:8000/products/items`,
+      url: `https://sanangelmx.com:8000/products/items`,
     };
 
     axios
