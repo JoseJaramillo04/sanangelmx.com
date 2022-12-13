@@ -3,12 +3,21 @@ app: sanangelmx-aws-nodejs-express-api
 service: sanangelmx-aws-nodejs-express-api
 frameworkVersion: '3'
 
+custom:
+  config:
+    MERCHANT_ID: ${ssm:MERCHANT_ID}
+    CLOVER_API_KEY: ${ssm:CLOVER_API_KEY}
+
 provider:
   name: aws
   runtime: nodejs14.x
+
+  
+    
 
 functions:
   api:
     handler: handler.handler
     events:
       - httpApi: '*'
+      
