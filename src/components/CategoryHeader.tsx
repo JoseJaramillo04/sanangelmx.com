@@ -24,7 +24,7 @@ function CategoryHeader(props: { name?: string; categoryId: string }) {
         src={require(`../assets/${
           map.has(props.categoryId)
             ? map.get(props.categoryId)
-            : "photos/pullaC.jpg"
+            : "photos/pulla.webp"
         }`)}
         alt="header"
       />

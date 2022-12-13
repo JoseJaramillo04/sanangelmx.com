@@ -15,15 +15,10 @@ app.get("/", (req, res, next) => {
   });
 });
 
-app.get("/hello", (req, res, next) => {
+app.get("/hello", async (req, res) => {
   return res.json(['hi'])
 });
 
-app.use((req, res, next) => {
-  return res.status(404).json({
-    error: "Not Found",
-  });
-});
 
 
 app.get('/products/items', async (req,res) => {
@@ -176,5 +171,12 @@ app.get('/category/:categoryId/name', async (req,res) => {
 
   res.json(data)
 } )
+
+
+app.use((req, res, next) => {
+  return res.status(404).json({
+    error: "Not Found",
+  });
+});
 
 module.exports.handler = serverless(app);
