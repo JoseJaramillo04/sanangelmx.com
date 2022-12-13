@@ -1,0 +1,71 @@
+.animation{
+    font-size: 30px;
+    font-weight: 500;
+  }
+  
+  .animation .special{
+    color: #E10613;
+  }
+  
+  .animation-first-row{
+    box-sizing: content-box;
+    display: flex;
+    height: 55px;
+    
+  }
+  
+  
+  .animation .animation-first-row .words span{
+    display: block;
+    height: 100%;
+    animation-name: spin-words;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+  }
+  
+  .animation .words{
+    overflow: hidden;
+    margin-left: 8px;
+    text-align: left;
+  }
+  
+  @keyframes spin-words {
+    10%{
+      transform: translateY(-112%);
+    }
+    25%{
+      transform: translateY(-100%);
+    }
+    35%{
+      transform: translateY(-212%);
+    }
+    50%{
+      transform: translateY(-200%);
+    }
+    60%{
+      transform: translateY(-312%);
+    }
+    75%{
+      transform: translateY(-300%);
+    }
+    85%{
+      transform: translateY(-412%);
+    }
+    100%{
+      transform: translateY(-400%);
+    }
+    
+  }
+  
+  @media screen and (min-width:800px) {
+    .animation {
+      font-size: 65px;
+    }
+  
+    .animation-first-row{
+      box-sizing: content-box;
+      display: flex;
+      height: 90px;
+      
+    }
+  }

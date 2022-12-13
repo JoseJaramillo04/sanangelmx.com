@@ -1,0 +1,84 @@
+.contact-screen iframe{
+    height: 200px
+}
+
+
+.multi-section{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.contact-screen .content{
+    margin-top: 40px;
+}
+
+
+@media screen and (min-width:800px) {
+    .multi-section{
+        flex-direction: row;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .contact-screen iframe{
+        height: 400px
+    }
+
+    .contact-screen .content{
+        width: 35%;
+        margin: 0;
+        margin-left: 2%;
+        padding: 0;
+    }
+}
+
+.multi-section .content{
+    display: flex;
+    flex-direction: column;
+}
+
+.multi-section .content h4{
+    width: 100%;
+    margin-bottom: 30px;
+
+}
+
+.multi-section .content span{
+    width: 100%;
+    margin-bottom: 17px;
+}
+
+.multi-section input, .multi-section textarea{
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #76767648;
+    background-color: #EBF0F0;
+    height: 33px;
+    padding: 0 8px;
+}
+
+.multi-section label{
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+#input-field-msg{
+    height: 100px;
+    line-height: 20px;
+}
+
+.msg-button{
+    font-weight: 500;
+    color: white;
+    background-color: #E10613;
+    border: 1px solid #E10613;
+    border-radius: 4px;
+    padding: 3px 10px;
+    align-self: flex-start;
+}

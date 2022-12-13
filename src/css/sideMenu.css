@@ -1,0 +1,161 @@
+
+
+.side-menu-container{
+   display: flex;
+   flex-direction: column;
+   margin-top: 10px;
+}
+
+.side-menu h4{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 45px;
+  align-items: center;
+  border: 1.3px solid #5252524b;
+  border-radius: 5px;
+  background-color: #5252520a;
+}
+
+
+
+.category-list span:hover{
+  color: #E10613;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cat-row{
+  position: absolute;
+}
+
+
+
+@media screen and (max-width:1500px) {
+  .side-menu{
+      margin-left: 10px;
+  }
+
+  
+}
+
+@media screen and (max-width:800px) {
+  .side-menu{
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  
+}
+
+.category-list{
+  display: none;
+}
+
+
+
+.check-cat{
+  display: none;
+}
+
+.check-cat-label{
+  padding-top: 21px;
+  position: absolute;
+  left: 10px;
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.category-list span{
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+@media screen and (min-width:800px) {
+  .side-menu{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    max-width: 260px;
+    margin-top: 16px;
+    box-shadow: 0px 5px 6px 1px rgba(0, 0,0,.2);
+    overflow: hidden;
+    border-radius: 0px;
+    background-color: white;
+  }
+
+  .side-menu h4{
+    border: none;
+    background-color: white;
+    border-radius: 0px;
+  }
+
+
+  .side-menu-container{
+    flex-direction: row;
+    margin-top: 0px;
+  }
+
+  .check-cat, .check-cat-label{
+    display: none;
+  }
+
+  .category-list{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 80%;
+  }
+
+  .category-list span{
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+
+
+.check-cat-label span,
+.check-cat-label span::before,
+.check-cat-label span::after{
+  display: block;
+  background:black;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+} 
+
+.check-cat-label span::before,
+.check-cat-label span::after{
+  content: '';
+  position: absolute;
+}
+
+.check-cat-label span::before{
+  bottom: 7px;
+}
+
+.check-cat-label span::after{
+  top: 7px;
+}
+
+
+
+  
+
+  

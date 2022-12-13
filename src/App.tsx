@@ -1,74 +1,78 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import {
-	useNavigate,
-	Route,
-	HashRouter,
-	BrowserRouter,
-	Routes,
-} from "react-router-dom";
+import { useNavigate, Route, BrowserRouter, Routes } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css"; //Boostrap Import 1/2
 import "bootstrap/dist/js/bootstrap.bundle.min"; //Boostrap Import 2/2
 import "./homePageStyle.css";
+import Header from "./components/Header";
+import Carousel from "./components/Carousel";
+import SectionTitle from "./components/SectionTitle";
+import SideMenu from "./components/SideMenu";
+import ProductCard from "./components/ProductCard";
+import PageBreak from "./components/PageBreak";
+import Footer from "./components/Footer";
+import ContactUsSection from "./components/ContactUsSection";
+import Products from "./components/Screens/Products";
+import Category from "./components/Screens/Category";
+import Contact from "./components/Screens/Contact";
+import { featuredProducts, popularCategories } from "./assets/data";
 
 function Home() {
-	const navigate = useNavigate();
+  const navigate = useNavigate();
 
-	return (
-		<div className="Application">
-			<head>
-				<title>SanAngel Productos Mexicanos</title>
-			</head>
-			<div className="container">
-				<div className="row fair-spacing">
-					<div className="col">
-						<iframe
-							src="https://embed.lottiefiles.com/animation/98495"
-							className="underConstruction"
-						/>
-					</div>
-					<div className="col">
-						<h1 id="underDevTitle">We're under Development</h1>
-						<div className="row">
-							<p id="underDevDescription">Please Come Back later!</p>
-						</div>
-						<div className="row">
-							<button
-								type="button"
-								className="btn btn-outline-primary"
-								id="underDevBtn"
-								onClick={() => {
-									window.location.href = "https://www.pjl.sanangelmx.com";
-								}}
-							>
-								Employee Portal
-							</button>
-						</div>
-					</div>
-				</div>
-				<div className="row">
-					<p id="salesInfo">
-						For sales please call the office number{" "}
-						<a href="tel:956-992-8831">(956)992-8831</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <>
+      <Carousel />
+      <div className="side-menu-container">
+        <SideMenu />
+        <div className="content">
+          <SectionTitle title="Popular Categories" />
+          <div className="products-div-container">
+            {popularCategories.map(({ name, img, categoryId }) => (
+              <ProductCard
+                key={"product-card" + name}
+                name={name}
+                imgSrc={require(`./assets/${img}`)}
+                categoryId={categoryId}
+              />
+            ))}
+          </div>
+          <SectionTitle title="Featured Products" />
+          <div className="products-div-container">
+            {featuredProducts.map(({ name, img }) => (
+              <ProductCard
+                key={"product-card-featured" + name}
+                name={name}
+                imgSrc={require(`./assets/${img}`)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <PageBreak />
+      <div className="content">
+        <ContactUsSection />
+      </div>
+    </>
+  );
 }
 
 function App() {
-	return (
-		<BrowserRouter basename={process.env.PUBLIC_URL}>
-			<div className="Application">
-				<Routes>
-					<Route path="/" element={<Home />} />
-				</Routes>
-			</div>
-		</BrowserRouter>
-	);
+  return (
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Header />
+      <div className="Application">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/category/:categoryId" element={<Category />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
 export default App;

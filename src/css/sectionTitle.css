@@ -1,0 +1,22 @@
+.section-container{
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .section-line{
+    border: 2px solid #E10613;
+    opacity: 1;
+    width: 100%;
+    max-width: 50px;
+    margin: 2px 0;
+  }
+  
+  .section-title{
+    font-size: 20px;
+    font-weight: 500;
+  }
