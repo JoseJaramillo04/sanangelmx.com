@@ -12,7 +12,7 @@ function Products() {
     setLoading(true);
     const options = {
       method: "GET",
-      url: `https://sanangelmx.com:8000/products/items`,
+      url: `https://3622lj7vfb.execute-api.us-east-1.amazonaws.com/products/items`,
     };
 
     axios
