@@ -23,7 +23,7 @@ function Category(props: { categoryTitle?: string }) {
   const getCategoryName = () => {
     const options = {
       method: "GET",
-      url: `https://sanangelmx.com:8000/category/${categoryId}/name`,
+      url: `https://3622lj7vfb.execute-api.us-east-1.amazonaws.com/category/${categoryId}/name`,
     };
 
     axios
@@ -40,7 +40,7 @@ function Category(props: { categoryTitle?: string }) {
     setLoading(true);
     const options = {
       method: "GET",
-      url: `https://sanangelmx.com:8000/category/${categoryId}`,
+      url: `https://3622lj7vfb.execute-api.us-east-1.amazonaws.com/category/${categoryId}`,
     };
 
     axios

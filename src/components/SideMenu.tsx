@@ -34,7 +34,7 @@ function SideMenu() {
     setLoading(true);
     const options = {
       method: "GET",
-      url: `https://sanangelmx.com:8000/category`,
+      url: `https://3622lj7vfb.execute-api.us-east-1.amazonaws.com/category`,
     };
 
     axios
