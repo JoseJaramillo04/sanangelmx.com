@@ -1,4 +1,4 @@
-import cPulla from "../assets/photos/pullaC.jpg";
+import cPulla from "../assets/photos/pulla.webp";
 import cTamarindo from "../assets/licensed/tamarindo-header.webp";
 import cGarlic from "../assets/licensed/garlic-header.webp";
 import cSpices from "../assets/licensed/spices-header.webp";
@@ -55,7 +55,7 @@ export const featuredProducts = [
   { name: "Hibiscus Flower", img: "licensed/jamaica-small.webp" },
   { name: "Pinto Beans", img: "licensed/pinto-small.webp" },
   { name: "Mayocoba Beans", img: "licensed/mayocoba-small.webp" },
-  { name: "Corn Husks", img: "photos/hoja.jpg" },
+  { name: "Corn Husks", img: "photos/hoja.webp" },
   { name: "Tamarind", img: "licensed/tamarind-small.webp" },
 ];
 
