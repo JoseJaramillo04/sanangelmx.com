@@ -11,6 +11,9 @@ function CategoryHeader(props: { name?: string; categoryId: string }) {
     ["86GMR15R3ZZ4G", "licensed/escoba.webp"],
     ["E9DVHNA90H6Q2", "licensed/mesh.webp"],
     ["XD1XZ6XH4HYXC", "licensed/jarritos.webp"],
+    ["F94R6P2FK902C", "licensed/sabritas-header.webp"],
+    ["15XX57BC1V85J", "licensed/dulces-header.webp"],
+    ["ZV0NZ0EBTWFCJ", "licensed/chamoy-header.webp"],
   ]);
 
   return (

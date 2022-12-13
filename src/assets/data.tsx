@@ -33,17 +33,17 @@ export const popularCategories = [
   },
   {
     name: "Hot Sauce, Chamoy, artificial food flavors",
-    img: "photos/deli.jpg",
+    img: "licensed/chamoy-small.webp",
     categoryId: "ZV0NZ0EBTWFCJ",
   },
   {
     name: "Mexican Candy",
-    img: "photos/forritos.jpg",
+    img: "licensed/dulces-small.webp",
     categoryId: "15XX57BC1V85J",
   },
   {
     name: "Mexican Chips",
-    img: "photos/sabritas.png",
+    img: "licensed/sabritas-small.webp",
     categoryId: "F94R6P2FK902C",
   },
 ];

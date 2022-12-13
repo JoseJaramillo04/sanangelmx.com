@@ -1,15 +1,10 @@
 import * as React from "react";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-interface Item {
-  id: string;
-  name: string;
-  modifiedTime: string;
-}
+import { productInfoType } from "../assets/types";
 
 interface Props {
-  items: Item[];
+  items: productInfoType[];
   placeholder: string;
 }
 
@@ -44,7 +39,7 @@ const ProductList: React.FunctionComponent<Props> = ({
         <table>
           <tbody>
             {items
-              .filter((item: any) => {
+              .filter((item: productInfoType) => {
                 if (searchTerm === "") return item;
                 else if (
                   item.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -52,7 +47,7 @@ const ProductList: React.FunctionComponent<Props> = ({
                   return item;
                 else return null;
               })
-              .map((item: any) => (
+              .map((item: productInfoType) => (
                 <tr key={"row" + item.id}>
                   <td className="tr-name">{item.name}</td>
                   <td className="tr-time">

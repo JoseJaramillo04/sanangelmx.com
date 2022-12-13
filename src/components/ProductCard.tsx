@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 
 function ProductCard(props: {
   name: string;
-  imgSrc: any;
+  imgSrc: string;
   categoryId?: string;
 }) {
   const navigate = useNavigate();

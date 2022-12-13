@@ -53,7 +53,7 @@ app.get('/products/items', async (req,res) => {
      res.json(items)
 } )
 
-app.get('/categories', async (req,res) => {
+app.get('/category', async (req,res) => {
     let offset = 0
     let categories = []
     
@@ -84,7 +84,7 @@ app.get('/categories', async (req,res) => {
      res.json(categories.reverse())
 } )
 
-app.get('/categories/:categoryId', async (req,res) => {
+app.get('/category/:categoryId', async (req,res) => {
     const {categoryId} = req.params;
     let offset = 0
     let items = []
@@ -134,7 +134,7 @@ app.get('/categories/:categoryId', async (req,res) => {
     res.json(items)
 } )
 
-app.get('/categories/name/:categoryId', async (req,res) => {
+app.get('/category/:categoryId/name', async (req,res) => {
     const {categoryId} = req.params;
     
     let data = []

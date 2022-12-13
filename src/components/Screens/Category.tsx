@@ -23,7 +23,7 @@ function Category(props: { categoryTitle?: string }) {
   const getCategoryName = () => {
     const options = {
       method: "GET",
-      url: `http://localhost:8000/categories/name/${categoryId}`,
+      url: `http://localhost:8000/category/${categoryId}/name`,
     };
 
     axios
@@ -40,7 +40,7 @@ function Category(props: { categoryTitle?: string }) {
     setLoading(true);
     const options = {
       method: "GET",
-      url: `http://localhost:8000/categories/${categoryId}`,
+      url: `http://localhost:8000/category/${categoryId}`,
     };
 
     axios

@@ -52,14 +52,7 @@
   display: none;
 }
 
-.check-cat:checked ~ .category-list{
-  display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 85%;
-    margin: 0 auto;
-    padding-top: 10px;
-}
+
 
 .check-cat{
   display: none;
@@ -68,7 +61,7 @@
 .check-cat-label{
   padding-top: 21px;
   position: absolute;
-  left: 0;
+  left: 10px;
   margin-left: 1em;
   display: flex;
   align-items: center;
