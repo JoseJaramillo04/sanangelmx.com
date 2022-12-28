@@ -15,8 +15,8 @@ function ContactInfo() {
         </div>
         <div className="address-row">
           <span className="address-title">Phone:</span>
-          <a href="tel:+1(956)561-6634" className="address-content">
-            +1 (956)561-6634
+          <a href="tel:+1(956)992-8831" className="address-content">
+            +1 (956)992-8831
           </a>
         </div>
         <div className="address-row last-row">
