@@ -1,4 +1,4 @@
-import cPulla from "../assets/photos/pulla.webp";
+import cPulla from "../assets/licensed/chile-puya.webp";
 import cTamarindo from "../assets/licensed/tamarindo-header.webp";
 import cGarlic from "../assets/licensed/garlic-header.webp";
 import cSpices from "../assets/licensed/spices-header.webp";
