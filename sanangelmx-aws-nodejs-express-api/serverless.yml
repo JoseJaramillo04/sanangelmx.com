@@ -1,7 +1,7 @@
 org: ferb7o2
 app: sanangelmx-aws-nodejs-express-api
 service: sanangelmx-aws-nodejs-express-api
-frameworkVersion: '3'
+frameworkVersion: "3"
 
 provider:
   name: aws
@@ -10,12 +10,8 @@ provider:
     MERCHANT_ID: ${param:MERCHANT_ID}
     CLOVER_API_KEY: ${param:CLOVER_API_KEY}
 
-
-    
-
 functions:
   api:
     handler: handler.handler
     events:
-      - httpApi: '*'
-      
+      - httpApi: "*"
