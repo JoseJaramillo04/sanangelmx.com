@@ -1,5 +1,5 @@
 # Business Front-End Website
-[![Button Example](https://img.shields.io/badge/Live_Link_to_Site: sanangelmx.com-37a779?style=for-the-badge)](https://sanangelmx.com)
+[![Button Example](https://img.shields.io/badge/Live_Link_to_Site-37a779?style=for-the-badge)](https://sanangelmx.com)
 This project is a front-end website for a business, designed to showcase the company's products and services.
 
 ## Features
